@@ -2,39 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Coastal Beach Theme Design System - All colors in HSL */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors inspired by coastal environment */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card and surface colors */
+    --card: 210 15% 97%;
+    --card-foreground: 215 25% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 210 15% 97%;
+    --popover-foreground: 215 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Ocean blues - primary color palette */
+    --primary: 210 85% 35%;
+    --primary-foreground: 210 20% 98%;
+    --primary-light: 210 75% 50%;
+    --primary-dark: 215 90% 25%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Sandy beige - secondary colors */
+    --secondary: 45 25% 85%;
+    --secondary-foreground: 45 15% 25%;
+    --sand-light: 50 30% 90%;
+    --sand-medium: 45 25% 75%;
+    --sand-dark: 40 20% 60%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Seafoam green - accent colors */
+    --accent: 165 35% 65%;
+    --accent-foreground: 165 20% 15%;
+    --seafoam-light: 165 25% 80%;
+    --seafoam-bright: 165 45% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Muted ocean tones */
+    --muted: 210 15% 92%;
+    --muted-foreground: 210 10% 45%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 98%;
+    --success: 140 55% 45%;
+    --success-foreground: 140 20% 95%;
+    --warning: 45 85% 55%;
+    --warning-foreground: 45 20% 15%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Interactive elements */
+    --border: 210 20% 88%;
+    --input: 210 20% 95%;
+    --ring: 210 85% 35%;
+
+    /* Coastal gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary-light)));
+    --gradient-shore: linear-gradient(180deg, hsl(var(--seafoam-light)), hsl(var(--sand-light)));
+    --gradient-sunset: linear-gradient(45deg, hsl(var(--warning)), hsl(var(--accent)));
+    --gradient-depth: linear-gradient(180deg, hsl(var(--primary-light)), hsl(var(--primary-dark)));
+
+    /* Animations and shadows */
+    --transition-wave: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-coastal: 0 4px 20px -4px hsl(var(--primary) / 0.15);
+    --shadow-sand: 0 2px 10px -2px hsl(var(--sand-dark) / 0.2);
+    --shadow-foam: 0 0 30px hsl(var(--seafoam-bright) / 0.3);
 
     --radius: 0.5rem;
 
@@ -56,33 +85,60 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode coastal theme */
+    --background: 215 25% 8%;
+    --foreground: 210 20% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 215 20% 12%;
+    --card-foreground: 210 20% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 215 20% 12%;
+    --popover-foreground: 210 20% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Ocean blues in dark mode */
+    --primary: 210 75% 60%;
+    --primary-foreground: 215 25% 8%;
+    --primary-light: 210 65% 70%;
+    --primary-dark: 215 85% 40%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    /* Sandy beige in dark mode */
+    --secondary: 45 15% 20%;
+    --secondary-foreground: 210 20% 95%;
+    --sand-light: 50 20% 25%;
+    --sand-medium: 45 15% 18%;
+    --sand-dark: 40 10% 15%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    /* Seafoam green in dark mode */
+    --accent: 165 40% 55%;
+    --accent-foreground: 165 25% 10%;
+    --seafoam-light: 165 30% 45%;
+    --seafoam-bright: 165 50% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --muted: 215 15% 18%;
+    --muted-foreground: 210 10% 60%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 210 20% 95%;
+    --success: 140 60% 50%;
+    --success-foreground: 140 25% 10%;
+    --warning: 45 90% 65%;
+    --warning-foreground: 45 25% 10%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 215 15% 20%;
+    --input: 215 15% 18%;
+    --ring: 210 75% 60%;
+
+    /* Dark mode gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)));
+    --gradient-shore: linear-gradient(180deg, hsl(var(--muted)), hsl(var(--sand-light)));
+    --gradient-sunset: linear-gradient(45deg, hsl(var(--warning)), hsl(var(--accent)));
+    --gradient-depth: linear-gradient(180deg, hsl(var(--primary)), hsl(var(--primary-dark)));
+
+    /* Dark mode shadows */
+    --shadow-coastal: 0 4px 20px -4px hsl(var(--primary) / 0.25);
+    --shadow-sand: 0 2px 10px -2px hsl(var(--background) / 0.8);
+    --shadow-foam: 0 0 30px hsl(var(--seafoam-bright) / 0.2);
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

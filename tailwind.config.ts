@@ -22,6 +22,8 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          light: "hsl(var(--primary-light))",
+          dark: "hsl(var(--primary-dark))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -46,6 +48,24 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        // Coastal theme colors
+        sand: {
+          light: "hsl(var(--sand-light))",
+          medium: "hsl(var(--sand-medium))",
+          dark: "hsl(var(--sand-dark))",
+        },
+        seafoam: {
+          light: "hsl(var(--seafoam-light))",
+          bright: "hsl(var(--seafoam-bright))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -80,10 +100,49 @@ export default {
             height: "0",
           },
         },
+        // Coastal wave animations
+        "wave-gentle": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-4px)" },
+        },
+        "wave-flow": {
+          "0%": { transform: "translateX(-100%) rotate(0deg)" },
+          "100%": { transform: "translateX(100%) rotate(360deg)" },
+        },
+        "tide-rise": {
+          "0%": { transform: "scaleY(0.5)", opacity: "0.6" },
+          "50%": { transform: "scaleY(1)", opacity: "1" },
+          "100%": { transform: "scaleY(0.8)", opacity: "0.8" },
+        },
+        "sand-shimmer": {
+          "0%, 100%": { transform: "scale(1)", opacity: "0.8" },
+          "50%": { transform: "scale(1.05)", opacity: "1" },
+        },
+        "float-up": {
+          "0%": { transform: "translateY(20px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        // Coastal animations
+        "wave-gentle": "wave-gentle 3s ease-in-out infinite",
+        "wave-flow": "wave-flow 8s linear infinite",
+        "tide-rise": "tide-rise 4s ease-in-out infinite",
+        "sand-shimmer": "sand-shimmer 2s ease-in-out infinite",
+        "float-up": "float-up 0.6s ease-out forwards",
+      },
+      backgroundImage: {
+        "gradient-ocean": "var(--gradient-ocean)",
+        "gradient-shore": "var(--gradient-shore)",
+        "gradient-sunset": "var(--gradient-sunset)",
+        "gradient-depth": "var(--gradient-depth)",
+      },
+      boxShadow: {
+        "coastal": "var(--shadow-coastal)",
+        "sand": "var(--shadow-sand)",
+        "foam": "var(--shadow-foam)",
       },
     },
   },
