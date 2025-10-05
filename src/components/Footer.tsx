@@ -81,9 +81,6 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      
-      {/* Animated wave pattern */}
-      <div className="h-2 bg-gradient-to-r from-seafoam-light via-primary-light to-accent opacity-60 animate-wave-flow" />
     </footer>
   );
 };
