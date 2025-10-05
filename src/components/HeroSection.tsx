@@ -40,7 +40,7 @@ export const HeroSection = () => {
           
           <div className="flex items-center text-primary-foreground/80 text-sm">
             <MapPin className="w-4 h-4 mr-2" />
-            <span>Monterey Bay, CA • 36.6002°N, 121.8947°W</span>
+            <span>Marina Beach, Chennai • 13.0524°N, 80.2825°E</span>
           </div>
         </div>
       </div>

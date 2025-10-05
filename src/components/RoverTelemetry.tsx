@@ -17,7 +17,7 @@ export const RoverTelemetry = () => {
     signal: 92,
     distance: 2.4,
     speed: 0.8,
-    coordinates: { lat: 36.6002, lng: -121.8947 },
+    coordinates: { lat: 13.0524, lng: 80.2825 },
     uptime: "14:32:18",
     status: "Collecting Data"
   };
@@ -27,7 +27,7 @@ export const RoverTelemetry = () => {
       <CardHeader>
         <CardTitle className="text-xl text-foreground flex items-center gap-2">
           <Bot className="w-5 h-5 text-seafoam-bright animate-wave-gentle" />
-          Rover Status
+          Kurma Rover Status
         </CardTitle>
         <Badge className="w-fit bg-success/10 text-success border-success/20">
           <Signal className="w-3 h-3 mr-1" />
@@ -89,7 +89,7 @@ export const RoverTelemetry = () => {
             </div>
           </div>
           <div className="bg-muted/30 p-2 rounded text-xs font-mono text-foreground">
-            {telemetryData.coordinates.lat}°N, {Math.abs(telemetryData.coordinates.lng)}°W
+            {telemetryData.coordinates.lat}°N, {telemetryData.coordinates.lng}°E
           </div>
           
           <div className="flex items-center justify-between text-sm">

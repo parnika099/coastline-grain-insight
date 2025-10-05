@@ -4,6 +4,8 @@ import { BeachClassification } from "@/components/BeachClassification";
 import { BeachInformation } from "@/components/BeachInformation";
 import { PhotoGallery } from "@/components/PhotoGallery";
 import { RoverTelemetry } from "@/components/RoverTelemetry";
+import { SandUsesActivities } from "@/components/SandUsesActivities";
+import { Chatbot } from "@/components/Chatbot";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
@@ -12,22 +14,29 @@ const Index = () => {
       <HeroSection />
       
       <main className="container mx-auto px-4 py-8 space-y-12">
+        {/* Rover Status First */}
+        <div className="max-w-md mx-auto lg:max-w-none">
+          <RoverTelemetry />
+        </div>
+        
+        {/* Sand Analysis and Beach Classification */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <RealTimeData />
           <BeachClassification />
         </div>
         
+        {/* Beach Information */}
         <BeachInformation />
         
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
-          <div className="xl:col-span-2">
-            <PhotoGallery />
-          </div>
-          <div>
-            <RoverTelemetry />
-          </div>
-        </div>
+        {/* Photo Gallery */}
+        <PhotoGallery />
+        
+        {/* Sand Uses and Activities */}
+        <SandUsesActivities />
       </main>
+      
+      {/* Chatbot */}
+      <Chatbot />
       
       <Footer />
     </div>

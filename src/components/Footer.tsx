@@ -75,9 +75,9 @@ export const Footer = () => {
             © 2024 Coastal Analytics Research Project. Open source under MIT License.
           </div>
           <div className="flex items-center gap-4 mt-4 md:mt-0">
-            <span>Monterey Bay Marine Sanctuary</span>
+            <span>Marina Beach, Chennai</span>
             <span>•</span>
-            <span>NOAA Partnership</span>
+            <span>Coastal Research Initiative</span>
           </div>
         </div>
       </div>
